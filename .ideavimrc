@@ -1,0 +1,55 @@
+set incsearch
+set ignorecase
+set smartcase
+set multiple-cursors
+set clipboard+=unnamed
+set ideajoin
+set ideaput
+set relativenumber
+set number
+set surround
+set idearefactormode=keep
+set ideajoin
+set showmode
+set NERDTree
+set visualbell
+set noerrorbells
+
+idearefactormode=keep 
+
+let mapleader = " "
+
+inoremap jk <ESC>
+
+nnoremap <leader>d "_d
+nnoremap <leader>c "_c
+vnoremap <leader>d "_d
+vnoremap <leader>c "_c
+
+nmap gl :action ShowErrorDescription <CR>
+nnoremap <leader>fo :action ReformatCode <CR>
+
+" Splits
+nnoremap <leader>sl :action SplitVertically <CR>
+nnoremap <leader>sj :action SplitHorizontally <CR>
+nnoremap <C-h> <c-w>h
+nnoremap <C-l> <c-w>l
+nnoremap <C-j> <c-w>j
+nnoremap <C-k> <c-w>k
+
+" Search
+nnoremap <leader>ff :action SearchEverywhere <CR>
+
+" Tabs
+noremap <S-h> :action PreviousTab <CR>
+noremap <S-l> :action NextTab <CR>
+
+" File navigation
+nnoremap gd :action GotoDeclaration <CR>
+nnoremap <leader>ge :action Generate<CR>
+nnoremap <leader>re :action RenameElement<CR>
+nnoremap <A-o> :action SwitchHeaderSource<CR>
+
+" Debug
+nnoremap <leader>bb :action ToggleLineBreakpoint <CR>
+nnoremap <leader>bb :action Debugger.RemoveAllBreakpoints <CR>
